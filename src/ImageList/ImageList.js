@@ -22,52 +22,54 @@ const ImageList = (props) => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div style={{ paddingTop: "60px" }}>
       {props.images.map((image) => {
         return (
-          <Grid
-            container
-            direction="column"
-            alignItems="center"
-            justify="center"
-            style={{ paddingTop: "70px", paddingBottom: "2vh" }}
-          >
-            <Grid item>
-              <Card key={image.id} className={classes.root}>
-                <Link
-                  to={{
-                    pathname: `/image/${image.id}`,
-                    state: { image: image },
-                  }}
-                >
-                  <CardMedia
-                    className={classes.media}
-                    image={image.largeImageURL}
-                  />
-                </Link>
-
-                <CardContent>
-                  <Like />
-                  <Typography gutterBottom variant="body1" component="h3">
-                    {image.likes} Likes
-                  </Typography>
-                  <Typography gutterBottom variant="h6" component="h3">
-                    By: {image.user}
-                  </Typography>
-                  <Typography variant="caption" component="p">
-                    {image.tags}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
+          <div>
+            <Grid
+              container
+              direction="column"
+              alignItems="center"
+              justify="center"
+              style={{ paddingTop: "5px", paddingBottom: "2vh" }}
+            >
+              <Grid item>
+                <Card key={image.id} className={classes.root}>
+                  <Link
+                    to={{
+                      pathname: `/image/${image.id}`,
+                      state: { image: image },
+                    }}
                   >
-                    Comments {image.comments}
-                  </Typography>
-                </CardContent>
-              </Card>
+                    <CardMedia
+                      className={classes.media}
+                      image={image.largeImageURL}
+                    />
+                  </Link>
+
+                  <CardContent>
+                    <Like />
+                    <Typography gutterBottom variant="body1" component="h3">
+                      {image.likes} Likes
+                    </Typography>
+                    <Typography gutterBottom variant="h6" component="h3">
+                      By: {image.user}
+                    </Typography>
+                    <Typography variant="caption" component="p">
+                      {image.tags}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      Comments {image.comments}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
             </Grid>
-          </Grid>
+          </div>
         );
       })}
     </div>

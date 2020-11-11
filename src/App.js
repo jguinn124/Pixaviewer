@@ -10,6 +10,7 @@ class App extends React.Component {
   state = {
     images: [],
     error: null,
+    searched: false,
   };
   handleGetRequest = async (e) => {
     e.preventDefault();
@@ -30,6 +31,7 @@ class App extends React.Component {
       });
     } else {
       this.setState({ images: response.hits, error: null });
+      this.setState({ searched: true });
     }
   };
 
@@ -49,6 +51,26 @@ class App extends React.Component {
           </Grid>
         ) : (
           <ImageList images={this.state.images} />
+        )}
+        {this.state.searched ? (
+          " "
+        ) : (
+          <Grid
+            container
+            direction="column"
+            alignItems="center"
+            justify="center"
+            style={{ paddingTop: "2vh", paddingBottom: "2vh" }}
+          >
+            <div style={{ paddingTop: "90px" }}>
+              <Typography variant="caption" component="p" align="center">
+                No Photos to View
+              </Typography>
+              <Typography variant="caption" component="p">
+                Enter a Search Query
+              </Typography>
+            </div>
+          </Grid>
         )}
       </div>
     );

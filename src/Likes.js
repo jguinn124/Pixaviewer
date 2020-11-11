@@ -31,7 +31,7 @@ class Likes extends React.Component {
       <div onClick={this.updateLikes}>
         {this.state.updated === false ? (
           <div>
-            <FavoriteIcon style={{ color: "black" }} />
+            <FavoriteIcon style={{ color: "gray" }} />
           </div>
         ) : (
           <div>

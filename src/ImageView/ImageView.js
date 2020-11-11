@@ -1,4 +1,5 @@
 import React from "react";
+import Typography from "@material-ui/core/Typography";
 
 const ImageView = (props) => {
   const {
@@ -10,10 +11,12 @@ const ImageView = (props) => {
   return (
     <div>
       <img src={image} alt={tags} />
-      <p>&copy;pixabay</p>
-      <h4>
-        Credit: <span>{owner}</span>
-      </h4>
+      <Typography variant="caption" component="p">
+        <p>&copy;pixabay</p>
+        <h4>
+          Credit: <span>{owner}</span>
+        </h4>
+      </Typography>
     </div>
   );
 };
