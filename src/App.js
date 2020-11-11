@@ -1,6 +1,8 @@
 import React from "react";
-import ImageSearch from "./ImageSearch/ImageSearch";
 import ImageList from "./ImageList/ImageList";
+import Appbar from "./Appbar";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
 
 const API_KEY = "1572283-b92e597df9908815dea42dc51";
 
@@ -11,6 +13,7 @@ class App extends React.Component {
   };
   handleGetRequest = async (e) => {
     e.preventDefault();
+
     const searchItem = e.target.elements.searchValue.value; //Gets the value on button click
     const url = `https://pixabay.com/api/?key=${API_KEY}&q=${searchItem}&image_type=photo`;
 
@@ -18,7 +21,13 @@ class App extends React.Component {
     const response = await request.json();
     this.setState({ images: response.hits });
     if (!searchItem) {
-      this.setState({ error: "please provide a search term" });
+      this.setState({
+        error: (
+          <Typography variant="caption" component="p">
+            Please Provide a Search Term
+          </Typography>
+        ),
+      });
     } else {
       this.setState({ images: response.hits, error: null });
     }
@@ -27,9 +36,17 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <ImageSearch handleGetRequest={this.handleGetRequest} />
+        <Appbar handleGetRequest={this.handleGetRequest} />
         {this.state.error !== null ? (
-          <div>{this.state.error}</div>
+          <Grid
+            container
+            direction="column"
+            alignItems="center"
+            justify="center"
+            style={{ paddingTop: "2vh", paddingBottom: "2vh" }}
+          >
+            <div style={{ paddingTop: "90px" }}>{this.state.error}</div>
+          </Grid>
         ) : (
           <ImageList images={this.state.images} />
         )}

@@ -4,13 +4,7 @@ const ImageSearch = (props) => {
   return (
     <div>
       <form onSubmit={props.handleGetRequest}>
-        <input
-          type="text"
-          autoComplete="off"
-          name="searchValue"
-          placeholder="Search"
-        />
-        <button>Search</button>
+        <input name="searchValue" placeholder="Search" />
       </form>
     </div>
   );

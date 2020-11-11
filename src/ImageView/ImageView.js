@@ -5,7 +5,7 @@ const ImageView = (props) => {
     largeImageURL: image,
     tags,
     user: owner,
-    pageURL,
+    //pageURL,
   } = props.location.state.image;
   return (
     <div>
