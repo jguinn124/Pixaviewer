@@ -15,13 +15,13 @@ const useStyles = makeStyles((theme) => ({
 
   title: {
     fontFamily: "'Cookie', cursive",
-    fontSize: 35,
+    fontSize: 45,
     fontWeight: 100,
     flexGrow: 1,
     marginRight: theme.spacing(2),
 
-    [theme.breakpoints.down("sm")]: {
-      fontSize: 15,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: 25,
     },
   },
   search: {
@@ -73,7 +73,7 @@ export default function SearchAppBar(props) {
       <AppBar style={{ background: "#2E3B55", color: "#E7E7E7" }}>
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
-            Pixabay-Instagram-Lookalike
+            PixaViewer
           </Typography>
 
           <div className={classes.search}>

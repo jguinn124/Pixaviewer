@@ -39,6 +39,24 @@ class App extends React.Component {
     return (
       <div>
         <Appbar handleGetRequest={this.handleGetRequest} />
+        {this.state.images.length === 0 && this.state.searched === true ? (
+          <Grid
+            container
+            direction="column"
+            alignItems="center"
+            justify="center"
+            style={{ paddingTop: "2vh", paddingBottom: "2vh" }}
+          >
+            <div style={{ paddingTop: "90px" }}>
+              <Typography variant="caption" component="p" align="center">
+                Search Contains 0 Results
+              </Typography>
+            </div>
+          </Grid>
+        ) : (
+          " "
+        )}
+
         {this.state.error !== null ? (
           <Grid
             container

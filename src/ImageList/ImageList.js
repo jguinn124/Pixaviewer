@@ -22,7 +22,7 @@ const ImageList = (props) => {
   const classes = useStyles();
 
   return (
-    <div style={{ paddingTop: "60px" }}>
+    <div style={{ paddingTop: "70px" }}>
       {props.images.map((image) => {
         return (
           <div>
