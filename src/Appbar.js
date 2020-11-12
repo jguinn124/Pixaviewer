@@ -73,7 +73,9 @@ export default function SearchAppBar(props) {
       <AppBar style={{ background: "#2E3B55", color: "#E7E7E7" }}>
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
-            PixaViewer
+            <a style={{ textDecoration: "none", color: "white" }} href={"/"}>
+              PixaViewer
+            </a>
           </Typography>
 
           <div className={classes.search}>

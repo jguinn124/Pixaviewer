@@ -20,12 +20,12 @@ const useStyles = makeStyles((theme) => ({
 
 const ImageList = (props) => {
   const classes = useStyles();
-
+  //const { user: pageURL } = props.location.state.image;
   return (
     <div style={{ paddingTop: "70px" }}>
       {props.images.map((image) => {
         return (
-          <div>
+          <div key={image.id}>
             <Grid
               container
               direction="column"
@@ -34,7 +34,7 @@ const ImageList = (props) => {
               style={{ paddingTop: "5px", paddingBottom: "2vh" }}
             >
               <Grid item>
-                <Card key={image.id} className={classes.root}>
+                <Card className={classes.root}>
                   <Link
                     to={{
                       pathname: `/image/${image.id}`,
@@ -53,7 +53,12 @@ const ImageList = (props) => {
                       {image.likes} Likes
                     </Typography>
                     <Typography gutterBottom variant="h6" component="h3">
-                      By: {image.user}
+                      <a
+                        style={{ textDecoration: "none", color: "black" }}
+                        href={image.pageURL}
+                      >
+                        By: {image.user}
+                      </a>
                     </Typography>
                     <Typography variant="caption" component="p">
                       {image.tags}
@@ -63,7 +68,12 @@ const ImageList = (props) => {
                       color="textSecondary"
                       component="p"
                     >
-                      Comments {image.comments}
+                      <a
+                        style={{ textDecoration: "none", color: "gray" }}
+                        href={image.pageURL}
+                      >
+                        Comments {image.comments}
+                      </a>
                     </Typography>
                   </CardContent>
                 </Card>
