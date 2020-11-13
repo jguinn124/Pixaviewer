@@ -1,8 +1,11 @@
 import React from "react";
+import "./fonts.css";
+
 import ImageList from "./ImageList/ImageList";
 import Appbar from "./Appbar";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import Background from "./background.png";
 
 const API_KEY = "1572283-b92e597df9908815dea42dc51";
 
@@ -73,22 +76,62 @@ class App extends React.Component {
         {this.state.searched ? (
           " "
         ) : (
-          <Grid
-            container
-            direction="column"
-            alignItems="center"
-            justify="center"
-            style={{ paddingTop: "2vh", paddingBottom: "2vh" }}
-          >
-            <div style={{ paddingTop: "90px" }}>
-              <Typography variant="caption" component="p" align="center">
-                No Photos to View
-              </Typography>
-              <Typography variant="caption" component="p">
-                Enter a Search Query
-              </Typography>
-            </div>
-          </Grid>
+          <div>
+            <Grid
+              container
+              direction="row"
+              alignItems="center"
+              justify="center"
+              style={{ paddingTop: "10vh", paddingBottom: "10vh" }}
+              spacing={7}
+            >
+              <Grid
+                item
+                style={{
+                  position: "relative",
+                }}
+              >
+                <Typography
+                  variant="h3"
+                  component="h2"
+                  style={{ fontFamily: "Libre Baskerville" }}
+                >
+                  Enter a Search Query.
+                </Typography>
+                <Typography
+                  variant="h3"
+                  component="h2"
+                  style={{ fontFamily: "Libre Baskerville" }}
+                >
+                  Explore.
+                </Typography>
+              </Grid>
+              <Grid item>
+                <div>
+                  <img
+                    alt="background"
+                    src={Background}
+                    style={{
+                      maxHeight: "20vh",
+                    }}
+                  ></img>
+                </div>
+              </Grid>
+            </Grid>
+            <Grid
+              container
+              direction="row"
+              alignItems="center"
+              justify="center"
+              style={{ paddingTop: "20vh" }}
+            >
+              <Grid item>
+                <h4 style={{ fontFamily: "Libre Baskerville" }}>
+                  PixaViewer is a modern way to search for images
+                </h4>
+              </Grid>
+            </Grid>
+          </div>
         )}
       </div>
     );
