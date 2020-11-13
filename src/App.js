@@ -123,7 +123,7 @@ class App extends React.Component {
               direction="row"
               alignItems="center"
               justify="center"
-              style={{ paddingTop: "20vh", paddingBottom: "30vh" }}
+              style={{ paddingTop: "20vh", paddingBottom: "50vh" }}
             >
               <Grid item>
                 <h4 style={{ fontFamily: "Libre Baskerville" }}>
