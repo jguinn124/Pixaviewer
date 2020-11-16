@@ -93,7 +93,7 @@ export default function Footer() {
               <Grid item className={classes.link}>
                 <a
                   href="https://github.com/jguinn124"
-                  style={{ textDecoration: "none", color: "#E7E7E7" }}
+                  style={{ textDecoration: "none", color: "white" }}
                 >
                   Github
                 </a>
@@ -101,7 +101,7 @@ export default function Footer() {
               <Grid item className={classes.link}>
                 <a
                   href="https://www.linkedin.com/in/john-guinn-2184bb134/"
-                  style={{ textDecoration: "none", color: "#E7E7E7" }}
+                  style={{ textDecoration: "none", color: "white" }}
                 >
                   Linkedin
                 </a>
