@@ -74,7 +74,14 @@ export default function Footer() {
               </Grid>
               <Grid item>
                 <Typography style={{ color: "white" }} variant="p">
-                  Leveraging Pixabay.com API we are able to search
+                  Leveraging{" "}
+                  <a
+                    style={{ textDecoration: "underline", color: "#E1E1E1" }}
+                    href="https://pixabay.com/"
+                  >
+                    Pixabay.com
+                  </a>{" "}
+                  API we are able to search
                 </Typography>
               </Grid>
               <Grid item>
