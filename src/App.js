@@ -6,6 +6,7 @@ import Appbar from "./Appbar";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Background from "./background.png";
+import Footer from "./Footer";
 
 const API_KEY = "1572283-b92e597df9908815dea42dc51";
 
@@ -133,6 +134,7 @@ class App extends React.Component {
             </Grid>
           </div>
         )}
+        <Footer />
       </div>
     );
   }
