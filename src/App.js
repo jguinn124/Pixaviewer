@@ -51,7 +51,7 @@ class App extends React.Component {
             justify="center"
             style={{ paddingTop: "2vh", paddingBottom: "2vh" }}
           >
-            <div style={{ paddingTop: "90px" }}>
+            <div style={{ paddingTop: "100px", paddingBottom: "60vh" }}>
               <Typography variant="caption" component="p" align="center">
                 Search Contains 0 Results
               </Typography>
@@ -69,7 +69,7 @@ class App extends React.Component {
             justify="center"
             style={{ paddingTop: "2vh", paddingBottom: "2vh" }}
           >
-            <div style={{ paddingTop: "90px" }}>{this.state.error}</div>
+            <div style={{ paddingTop: "100px" }}>{this.state.error}</div>
           </Grid>
         ) : (
           <ImageList images={this.state.images} />

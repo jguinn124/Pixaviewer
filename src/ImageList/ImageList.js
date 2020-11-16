@@ -22,7 +22,7 @@ const ImageList = (props) => {
   const classes = useStyles();
   //const { user: pageURL } = props.location.state.image;
   return (
-    <div style={{ paddingTop: "70px" }}>
+    <div style={{ paddingTop: "80px" }}>
       {props.images.map((image) => {
         return (
           <div key={image.id}>
