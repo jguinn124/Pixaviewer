@@ -93,15 +93,15 @@ class App extends React.Component {
                 }}
               >
                 <Typography
-                  variant="h3"
-                  component="h2"
+                  variant="h2"
+                  component="h1"
                   style={{ fontFamily: "Libre Baskerville" }}
                 >
                   Enter a Search Query.
                 </Typography>
                 <Typography
-                  variant="h3"
-                  component="h2"
+                  variant="h2"
+                  component="h1"
                   style={{ fontFamily: "Libre Baskerville" }}
                 >
                   Explore.
@@ -127,9 +127,13 @@ class App extends React.Component {
               style={{ paddingTop: "20vh", paddingBottom: "50vh" }}
             >
               <Grid item>
-                <h4 style={{ fontFamily: "Libre Baskerville" }}>
+                <Typography
+                  variant="h4"
+                  component="h2"
+                  style={{ fontFamily: "Libre Baskerville" }}
+                >
                   PixaViewer is a modern way to search for images
-                </h4>
+                </Typography>
               </Grid>
             </Grid>
           </div>
