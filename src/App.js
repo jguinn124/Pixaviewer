@@ -7,6 +7,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Background from "./background.svg";
 import Footer from "./Footer";
+import Examples from "./examples/Examples";
 
 const API_KEY = "1572283-b92e597df9908815dea42dc51";
 
@@ -83,7 +84,7 @@ class App extends React.Component {
               direction="row"
               alignItems="center"
               justify="center"
-              style={{ paddingTop: "10vh", paddingBottom: "10vh" }}
+              style={{ paddingTop: "17vh", paddingBottom: "12vh" }}
               spacing={7}
             >
               <Grid
@@ -119,12 +120,13 @@ class App extends React.Component {
                 </div>
               </Grid>
             </Grid>
+            <Examples />
             <Grid
               container
               direction="row"
               alignItems="center"
               justify="center"
-              style={{ paddingTop: "20vh", paddingBottom: "50vh" }}
+              style={{ paddingTop: "20vh", paddingBottom: "25vh" }}
             >
               <Grid item>
                 <Typography
